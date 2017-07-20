@@ -38,18 +38,18 @@
                                 </div>
                             <% } %>
                             <div class="navbar-end">
-                                <a class="navbar-item" href="http://localhost:5000/about">
+                                <a class="navbar-item" href="/about">
                                     <div class="navIt">About</div>
                                 </a>
                                 <% if(loggedIn){ %>
-                                    <a class="navbar-item" href="http://localhost:5000/blogs/new">
+                                    <a class="navbar-item" href="/blogs/new">
                                         <div class="navIt">New Post</div>
                                     </a>
-                                    <a class="navbar-item" href="http://localhost:5000/logout">
+                                    <a class="navbar-item" href="/logout">
                                         <div class="navIt">Logout</div>
                                     </a>
                                 <% } else { %>
-                                    <a class="navbar-item" href="http://localhost:5000/login">
+                                    <a class="navbar-item" href="/login">
                                         <div class="navIt">Login</div>
                                     </a>
                                 <% } %>                                
