@@ -32,7 +32,9 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 /////////////////////////////////////////////////////////////////////
 // APP CONFIG
-mongoose.connect("mongodb://localhost/restful_blog_app");
+// mongoose.connect("mongodb://localhost/restful_blog_app");
+mongoose.connect("mongodb://vihanga:qwe123@ds051534.mlab.com:51534/blog_platform");
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 // Use ejs as the extension
