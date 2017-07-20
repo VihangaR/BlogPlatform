@@ -1,0 +1,42 @@
+<% include partials/header.ejs %>
+
+<div class="hero-body">
+    <div class="container">
+        <form class="field" action="/login" method="POST">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <label class="label">Username</label>
+                    <p class="control has-icons-left">
+                        <input name="username" class="input is-success" type="text" placeholder="Username">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-user"></i>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <label class="label">Password</label>
+                    <p class="control has-icons-left">
+                        <input name="password" class="input is-success" type="password" placeholder="Password">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <p class="control">
+                        <button class="button is-primary">Submit</button>
+                    </p>                    
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<% include partials/footer.ejs %>

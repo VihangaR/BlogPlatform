@@ -1,0 +1,24 @@
+<% include partials/header.ejs %>
+
+<div class="hero-body">
+    <div class="container">
+        <div class="card showBlogCard">
+            <header class="card-header">
+                <p class="card-header-title title">
+                    <%= blog.title %>
+                </p>
+            </header>
+            <div class="card-image">
+                <figure class="image is-256x256 blogImage">
+                    <img src="<%= blog.image %>" alt="Blog Image">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="date"><%= blog.created.toDateString() %></div>
+                <div class="content"><%= blog.body %></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer.ejs %>

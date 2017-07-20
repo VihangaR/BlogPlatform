@@ -1,0 +1,56 @@
+<% include partials/header.ejs %>
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=gu99pks8k3dyy8fat65lyg4bpne30xn7387iynpdd60k15ex"></script>
+<script>tinymce.init({
+    selector:'textarea',
+    height:400  
+});</script>
+
+<div class="hero-body">
+    <div class="container">
+        <form class="field" action="/blogs/<%= blog._id %>?_method=PUT" method="POST">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <label class="label">Title</label>
+                    <p class="control has-icons-left">
+                        <input name="blog[title]" class="input is-success" type="text" placeholder="Title" value="<%= blog.title %>">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-etsy"></i>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <label class="label">Image URL</label>
+                    <p class="control has-icons-left">
+                        <input name="blog[image]" class="input is-success" type="text" placeholder="Image" value="<%= blog.image %>">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-picture-o"></i>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <label class="label">Blog Content</label>
+                    <p class="control">
+                        <textarea class="textarea is-success" placeholder="Textarea" name="blog[body]"><%= blog.body %></textarea>
+                    </p>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <p class="control">
+                        <input type="submit" class="button is-primary">
+                    </p>                    
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<% include partials/footer.ejs %>

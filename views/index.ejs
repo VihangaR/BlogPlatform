@@ -1,0 +1,35 @@
+<% include partials/header.ejs %>
+
+<div class="hero-body">
+    <div class="container">
+        <% blogs.forEach(function(blog){ %>
+            <div class="card blogCard">
+                <header class="card-header">
+                    <p class="card-header-title title">
+                        <%= blog.title %>
+                    </p>
+                </header>
+                <div class="card-image">
+                    <figure class="image is-256x256 blogImage">
+                        <img src="<%= blog.image %>" alt="Blog Image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="date"><%= blog.created.toDateString() %></div>
+                    <div class="content"><%- blog.body.substring(0,100) %>...</div>
+                </div>
+                <footer class="card-footer">
+                     <a href="/blogs/<%= blog.id %>" class="card-footer-item blogButton">Read More</a>
+                     <% if(loggedIn){ %>
+                        <a id="delButton" class="card-footer-item blogButton" href="/blogs/<%= blog.id %>/edit">Edit</a>
+                        <form id="delete" action="/blogs/<%= blog.id %>?_method=DELETE" method="POST">
+                            <button id="delButton2" class="card-footer-item blogButton">Delete</button>
+                        </form>
+                    <% } %>  
+                </footer>
+            </div>
+        <% }) %>
+    </div>
+</div>
+
+<% include partials/footer.ejs %>

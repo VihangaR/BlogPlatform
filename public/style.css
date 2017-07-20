@@ -1,0 +1,84 @@
+.bBody, html, body {
+    background: #B3FFAB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #12FFF7, #B3FFAB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #12FFF7, #B3FFAB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Roboto', sans-serif;
+    overflow-y:auto;
+}
+
+/*Navbar*/
+.navBox {
+    font-size: 150%;
+}
+.navIt{
+    font-size: 80%;
+}
+
+.navWidth {
+    background-color: white;
+}
+
+/*Blog Card*/
+.blogCard {
+    width: 40%;
+    margin: 20px auto;
+}
+.showBlogCard {
+    width: 85%;
+    margin: 20px auto;
+}
+.blogImage {
+    border-style: solid;
+    border-color: white;
+    border-width: 0 10px;
+}
+.title {
+    font-size: 125%
+}
+.date {
+    font-size: 75%;
+}
+.content {
+    margin-top: 5px;
+    font-size: 100%;
+    white-space: pre-line;
+}
+.blogButton {
+    color: black;
+    font-size: 100%;
+}
+.blogButton:hover {
+    color: #6BFFCD;
+}
+/*About*/
+.abTitle {
+    font-size: 300%;
+}
+.abSubtitle {
+    margin-top: 15px;
+    font-size: 150%;
+}
+
+@media only screen and (max-width: 500px) {
+    .blogCard {
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+
+#delButton {
+    background: none;
+    border: none;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: rgb(219, 219, 219);
+    cursor: pointer;
+    padding: 0.85rem;
+}
+
+#delButton2 {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.85rem;
+}
