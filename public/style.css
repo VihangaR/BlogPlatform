@@ -20,7 +20,7 @@
 
 /*Blog Card*/
 .blogCard {
-    width: 40%;
+    width: 50%;
     margin: 20px auto;
 }
 .showBlogCard {
@@ -63,6 +63,9 @@
     .blogCard {
         width: 80%;
         margin: 20px auto;
+    }
+    .card-footer {
+        font-size: 80%;
     }
 }
 
