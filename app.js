@@ -10,9 +10,9 @@ var User = require("./models/user");
 var LocalStrategy = require("passport-local");
 var passportLocalMongoose = require("passport-local-mongoose");
 
-User.register(new User({username: "Admin"}), "Admin", function(err, user){
-    passport.authenticate("local");
-});
+// User.register(new User({username: "Admin"}), "Admin", function(err, user){
+//     passport.authenticate("local");
+// });
 
 // Set port to 5000
 app.set('port', (process.env.PORT || 5000));
