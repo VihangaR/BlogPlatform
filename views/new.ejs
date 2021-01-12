@@ -1,8 +1,8 @@
-<% include partials/header.ejs %>
+<%- include("./partials/header.ejs") %>
 <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=gu99pks8k3dyy8fat65lyg4bpne30xn7387iynpdd60k15ex"></script>
 <script>tinymce.init({
     selector:'textarea',
-    height:400  
+    height:400
 });</script>
 
 <div class="hero-body">
@@ -45,7 +45,7 @@
                 <div class="column is-half is-offset-one-quarter">
                     <p class="control">
                         <input type="submit" class="button is-primary">
-                    </p>                    
+                    </p>
                 </div>
             </div>
         </form>
@@ -53,4 +53,4 @@
 </div>
 
 
-<% include partials/footer.ejs %>
+<%- include("./partials/footer.ejs") %>

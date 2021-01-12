@@ -1,4 +1,4 @@
-<% include partials/header.ejs %>
+<%- include("./partials/header.ejs") %>
 
 <div class="hero-body">
     <div class="container">
@@ -25,11 +25,11 @@
                         <form id="delete" action="/blogs/<%= blog.id %>?_method=DELETE" method="POST">
                             <button id="delButton2" class="card-footer-item blogButton">Delete</button>
                         </form>
-                    <% } %>  
+                    <% } %>
                 </footer>
             </div>
         <% }) %>
     </div>
 </div>
 
-<% include partials/footer.ejs %>
+<%- include("./partials/footer.ejs") %>

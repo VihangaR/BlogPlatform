@@ -2,6 +2,9 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
+mongoose.set('useFindAndModify', false);
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useUnifiedTopology', true);
 var methodOverride = require("method-override");
 var expressSanitizer = require('express-sanitizer');
 var Blog = require("./models/blog");
@@ -9,10 +12,6 @@ var passport = require("passport");
 var User = require("./models/user");
 var LocalStrategy = require("passport-local");
 var passportLocalMongoose = require("passport-local-mongoose");
-
-// User.register(new User({username: "Admin"}), "Admin", function(err, user){
-//     passport.authenticate("local");
-// });
 
 // Set port to 5000
 app.set('port', (process.env.PORT || 5000));
@@ -33,7 +32,7 @@ passport.deserializeUser(User.deserializeUser());
 /////////////////////////////////////////////////////////////////////
 // APP CONFIG
 // mongoose.connect("mongodb://localhost/restful_blog_app");
-mongoose.connect("mongodb://vihanga:qwe123@ds051534.mlab.com:51534/blog_platform");
+mongoose.connect("mongodb+srv://vihanga:qwe123@cluster0.qm2ct.mongodb.net/blog_platform?retryWrites=true&w=majority");
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -139,8 +138,8 @@ app.get("/blogs/:id", function(req, res){
                 res.render("show", {blog: fBlog, blogs:blogs, loggedIn: login});
             }
         }
-    });   
-    });    
+    });
+    });
 });
 
 // Create route
