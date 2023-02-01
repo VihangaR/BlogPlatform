@@ -16,7 +16,7 @@
     "express-sanitizer": "*",
     "express-session": "*",
     "method-override": "^3.0.0",
-    "mongoose": "^5.11.11",
+    "mongoose": "^5.13.15",
     "passport": "^0.4.1",
     "passport-local": "*",
     "passport-local-mongoose": "^6.1.0"
